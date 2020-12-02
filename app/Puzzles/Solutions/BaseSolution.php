@@ -7,8 +7,12 @@ use Illuminate\Support\Facades\Storage;
 
 class BaseSolution
 {
-    protected function getInput($day, $part) {
-        $filename = $day . '-' . $part . '.txt';
+    protected function getInput($day, $part = null) {
+        if (!is_null($part)) {
+            $filename = $day . '-' . $part . '.txt';
+        } else {
+            $filename = $day . '.txt';
+        }
 
         if (Storage::disk('puzzle-inputs')->exists($filename)) {
             return Storage::disk('puzzle-inputs')->get($filename);

@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 class Day1 extends BaseSolution implements SolutionTemplate
 {
     function part1() {
-        $input = $this->getInput(1,1);
+        $input = $this->getInput(1);
 
         $puzzleNumbers = Str::of($input)->explode(PHP_EOL)
             ->reject(function ($item) {
@@ -33,8 +33,7 @@ class Day1 extends BaseSolution implements SolutionTemplate
     }
 
     function part2() {
-        // Same inputs for both parts today
-        $input = $this->getInput(1,1);
+        $input = $this->getInput(1);
 
         $puzzleNumbers = Str::of($input)->explode(PHP_EOL)
             ->reject(function ($item) {
