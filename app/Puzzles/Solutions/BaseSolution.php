@@ -7,6 +7,13 @@ use Illuminate\Support\Facades\Storage;
 
 class BaseSolution
 {
+    protected $name;
+    protected $date;
+    protected $input;
+
+    protected function getDisplayName() {
+        return $this->date . ' - ' . $this->name;
+    }
     protected function getInput($day, $part = null) {
         if (!is_null($part)) {
             $filename = $day . '-' . $part . '.txt';

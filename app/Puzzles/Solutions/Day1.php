@@ -8,6 +8,9 @@ use Illuminate\Support\Str;
 
 class Day1 extends BaseSolution implements SolutionTemplate
 {
+    public $name = "Day 1: Report Repair";
+    public $date = "12/1/2020";
+
     function part1() {
         $input = $this->getInput(1);
 
